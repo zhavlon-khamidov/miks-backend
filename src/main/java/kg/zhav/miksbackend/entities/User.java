@@ -30,6 +30,6 @@ public class User {
     @Column(unique = true)
     private String phoneNumber;
 
-    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<UserRole> roles;
 }
